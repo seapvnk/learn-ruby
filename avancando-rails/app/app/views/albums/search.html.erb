@@ -1,0 +1,7 @@
+<p style="color: tomato"><%= notice %></p>
+
+<%= form_tag('searchAlbum', method: "get", controller: 'albums') do %>
+    <%= label_tag(:title, "Search for the album title: ") %>
+    <%= text_field_tag(:title) %>
+    <%= submit_tag("do search") %>
+<% end %>

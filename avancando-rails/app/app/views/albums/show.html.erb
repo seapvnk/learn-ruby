@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @album %>
+
+<% @album.songs.each do |song| %>
+  <p> <%= song.title %> - <%= song.duration %> </p>
+<% end %>
+
+<div>
+  <%= link_to "Edit this album", edit_album_path(@album) %> |
+  <%= link_to "Back to albums", albums_path %>
+  <%= link_to "New song", new_album_song_path(@album) %>
+
+  <%= button_to "Destroy this album", @album, method: :delete %>
+</div>
